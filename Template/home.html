@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}Home
-{% endblock title %}Home
+{% endblock title %}
 
 {% block style %}
 
@@ -21,9 +21,24 @@ p {
   color: black;
   font-weight: bold;
 }
+h6{
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: black;
+  position: absolute;
+  left: 614px;
+  margin-top: 3px;
+  color: white;
+}
 
  
 {% endblock style %}
+
+{% block nav %}
+<h6>WELCOME {{request.user}}</h6>
+<a href="/logout"><button class="btn btn-outline-success my-2 my-sm-0 mx-1" type="button">Logout</button></a>
+{% endblock nav %}
+
 {% block body %}
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -63,4 +78,6 @@ p {
     <span class="sr-only">Next</span>
   </a>
 </div>
-{% endblock body %}
+
+
+  {% endblock body %}

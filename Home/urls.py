@@ -10,5 +10,8 @@ urlpatterns = [
     path("study_materials", views.academics_sm),
     path("video_recordings", views.academics_vr),
     path("questions", views.academics_q),
-    path("answers", views.academics_a)
+    path("answers", views.academics_a),
+    path("home", views.home, name="home"),
+    path("login", views.loginUser, name="login"),
+    path("logout", views.logoutUser, name="logout")
 ]
