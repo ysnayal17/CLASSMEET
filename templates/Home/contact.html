@@ -6,9 +6,21 @@
 .form-group{
 padding: 0px 278px;
 }
+
+img{
+  <!-- border: 3px solid red; -->
+  display: block;
+  width: 100vw;
+  height: 300px;
+  margin-left: -32px;
+}
+
 {% endblock style %}
 {% block body %}
-<h1 class="text-center">Contact Us</h1>
+<div class="container-fluid mx-0">
+    <img src="https://source.unsplash.com/1200x300/?iphone" alt="...">
+</div>
+<h1 class="text-center my-2">Contact Us</h1>
 {% comment %} The form method is post and action is the same webpage retains after posting the data to db. POST the data to given endpoint(here contact) {% endcomment %}
 <form method="POST" action="/contact">
 {% comment %} Means the post request is coming from this website only {% endcomment %}

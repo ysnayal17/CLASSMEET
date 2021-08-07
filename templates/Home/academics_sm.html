@@ -4,6 +4,20 @@
 {% endblock title %}
 
 {% block body %}
+
+<form action="/study_materials/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+<li class="">
+  <a href="{% url 'Home:academics_sm' %}">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true">
+    </span>&nbsp; Add CoursePack
+  </a>
+</li>
+
 <div class="album py-5 bg-light">
     <div class="container">
 
